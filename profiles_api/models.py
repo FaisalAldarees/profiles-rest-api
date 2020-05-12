@@ -21,7 +21,7 @@ class UserProfileManager(BaseUserManager):
 
         return user
 
-    def create_superuser(serf, email, password):
+    def create_superuser(self, email, password, name):
         """Create and save a new superuser with given details"""
 
         user = self.create_user(email, name, password)
@@ -32,7 +32,7 @@ class UserProfileManager(BaseUserManager):
 
         return user
 
-        
+
 class UserProfile(AbstractBaseUser, PermissionsMixin):
     """Database model for users in the system"""
 
